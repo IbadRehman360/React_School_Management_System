@@ -14,57 +14,30 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `Dashboard Screeshot`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Dashboard](https://github.com/sachini1234/React_School_Management_System/assets/57388062/0ce01b95-4ba3-480b-b523-2f9e35cfd8ad)
 
-### `npm run build`
+### `Course Enrollment Screeshot`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Course_Enrollment](https://github.com/sachini1234/React_School_Management_System/assets/57388062/8e907eda-f805-43d0-bc9d-a83e0c376c95)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `Classes Screeshot`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![My_Classes](https://github.com/sachini1234/React_School_Management_System/assets/57388062/5c613d46-8b63-459a-89e0-433123e21b3f)
 
-### `npm run eject`
+### `Attendence Screeshot`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Attendence](https://github.com/sachini1234/React_School_Management_System/assets/57388062/5a6572df-a075-4c95-8855-fe498f2fef3f)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Assignment Screeshot`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Assignmnets](https://github.com/sachini1234/React_School_Management_System/assets/57388062/3b2c6d54-6451-4ea8-8155-ff730c2c1073)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `Results Screeshot`
 
-## Learn More
+![Results](https://github.com/sachini1234/React_School_Management_System/assets/57388062/fe2726f8-0a83-4dd4-9b9a-cf6e3e6aa1d1)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `Course fee Screeshot`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Fee](https://github.com/sachini1234/React_School_Management_System/assets/57388062/4f3b5011-fa63-4784-9946-129c9e832ef6)
