@@ -1,0 +1,716 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* Globals */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #db3d44;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Default width when expanded */
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.2s;
+}
+
+.sidebar.expanded + .dashboard,
+.sidebar.expanded + .courseenroll,
+.sidebar.expanded + .myclasses,
+.sidebar.expanded + .myattendence,
+.sidebar.expanded + .myassignment,
+.sidebar.expanded + .myresults,
+.sidebar.expanded + .myfee {
+    margin-left: 60px;
+}
+
+/* Topbar */
+.topbar {
+    width: 100%;
+    height: 60px;
+}
+
+.search {
+    position: relative;
+    width: 400px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+
+.search label i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+.user {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Dashboard Page */
+.dashboard {
+    margin-left: 240px; 
+    transition: margin-left 0.5s;
+    padding: auto;
+}
+
+/* Cards */
+.dashboard .cardBox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.dashboard .cardBox .box {
+    background: var(--white);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 7px 13px rgba(0, 0, 0, 0.3);  
+}
+
+.dashboard .cardBox .box .numbers {
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--red);
+}
+
+.dashboard .cardBox .box .cardName {
+    color: var(--black2);
+    font-size: 1.1rem;
+}
+
+.dashboard .cardBox .box .iconBx i {
+    font-size: 3rem;
+    color: var(--black2);
+}
+
+.dashboard .cardBox .box:hover {
+    background: var(--red);
+}
+
+.dashboard .cardBox .box:hover .numbers,
+.dashboard .cardBox .box:hover .cardName,
+.dashboard .cardBox .box:hover .iconBx i {
+    color: var(--white);
+}
+
+/* Time Table */
+.dashboard .details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+}
+  
+.dashboard .details .timetable {
+    width: 100%;
+    overflow-y: hidden;
+    min-height: 500px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+  
+.dashboard .details .timetableheader h2 {
+    color: var(--red);
+}
+
+.dashboard .details Table {
+    width: 900px;
+    overflow: scroll;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+  
+.dashboard .timetable thead {
+    height: 3em;
+}
+
+.dashboard .timetable tbody td {
+    height: 4em;
+}
+
+.dashboard .timetable table th,
+.dashboard .timetable table td {
+    border: 1px solid #7c7c7c;
+}
+  
+.dashboard .timetable .maths {
+    background: #d0ccff;
+}
+
+.dashboard .timetable .eng {
+    background: #f2bdfb;
+}
+
+.dashboard .timetable .phy {
+    background: #fcc5c5;
+}
+
+.dashboard .timetable .chem {
+    background: #c3f3d5;
+}
+  
+.dashboard .timetable .lunch {
+    background: #fff1c7;
+}
+  
+/* Progress Bar */
+.progressbar {
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.progressbar .progressheader h2 {
+    color: var(--red);
+}
+
+.progressbar .progresscont {
+    color: #6d6d6d;
+}
+  
+.progressbar .progresscont .maths {
+    color: #e9b10a;
+}
+
+.progressbar .progresscont .phy {
+    color: #f00;
+}
+
+.progressbar .progresscont .chem {
+    color: #1f7408;
+}
+
+.progressbar .progresscont .eng {
+    color: #e40bcf;
+}
+
+.circular-progress-bar {
+    width: 250px; 
+    height: 250px; 
+    animation: fillAnimation 2s ease-in-out;
+  
+    @keyframes fillAnimation {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+}
+
+/* Course Enrollement Page */
+.courseenroll {
+    margin-left: 240px; 
+    transition: margin-left 0.5s;
+    padding: auto;
+}
+
+.courseenroll .enrolldet {
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+  
+.courseenroll .enrolldet .enrollHeader h2 {
+    color: var(--red);
+}
+  
+.courseenroll .enroll label {
+    color: #333;
+}
+
+/* My Classes Page */
+.myclasses {
+    margin-left: 240px; 
+    transition: margin-left 0.5s;
+    padding: auto;
+}
+
+.myclasses .clessesdet {
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+  
+.myclasses .clessesdet .classHeader h2 {
+    color: var(--red);
+}
+
+.myclasses .cards_wrap{
+	width: 100%;
+}
+
+.myclasses .all .select-box select {
+    height: 100%;
+    width: 15%;
+    outline: none;
+    color: #707070;
+}
+
+.myclasses .classHeader h2,
+.myclasses .recentclassHeader h3,
+.myclasses .allclassHeader h3 {
+    color: var(--red);
+}
+
+.myclasses .cards_wrap .card_item{
+	width: 25%;
+}
+
+.myclasses .cards_wrap .card_inner{
+	background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 7px 13px rgba(0, 0, 0, 0.3);
+	min-width: 225px;
+	max-height: 370px;
+	width: 100%;
+}
+
+.myclasses .cards_wrap .card_item img{
+	width: 70px;
+	height: 70px;
+    box-shadow: 0 6px 13px rgba(0, 0, 0, 0.3);
+}
+
+.myclasses .cards_wrap .card_item .subject{
+	color: var(--red);
+	letter-spacing: 2px;
+	font-size: 20px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.myclasses .cards_wrap .card_item .date{
+	color: #939494;
+	font-size: 12px;
+}
+
+.myclasses .cards_wrap .card_item .det{
+	font-size: 14px;
+	line-height: 24px;
+	color: #2d2f32;
+}
+
+.myclasses .cards_wrap .card_item .teacher_name {
+    color: #3c3c3c;
+	font-size: 12px;
+}
+
+/* Attendence Page */
+.myattendence {
+    margin-left: 240px; 
+    transition: margin-left 0.5s;
+    padding: auto;
+}
+
+.myattendence .attendencedet {
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+
+.myattendence .courseattendence .attendenceHeader h2 {
+    color: var(--red);
+}
+    
+.myattendence .courseattendence .attendence-box h3 {
+    color: #333;
+    font-size: 1rem;
+}
+
+.myattendence .courseattendence .attendence .form-check {
+    display: inline-block;
+}
+  
+.myattendence .courseattendence .attendence .form-check-input {
+    border-color: #a5a5a5;
+}
+
+.myattendence .courseattendence .courseattendencetable {
+    width: 100%;
+    overflow-y: hidden;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+  
+.myattendence .courseattendence .courseattendencetable .attendenceHeader h2 {
+    color: var(--red);
+}
+  
+.myattendence .courseattendence .courseattendencetable table {
+    width: 100%;
+}
+  
+.myattendence .courseattendence .courseattendencetable table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+  
+.myattendence .courseattendencetable table tbody tr:hover {
+    background: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+  
+.myattendence .courseattendence .status.attend {
+    padding: 2px 4px;
+    background: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    
+}
+  
+.myattendence .courseattendence .status.notattend {
+    padding: 2px 4px;
+    background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Assignment Page */
+.myassignment {
+    margin-left: 240px; 
+    transition: margin-left 0.5s;
+    padding: auto;
+}
+
+.myassignment .assignmentdet {
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+  
+.myassignment .assignmentdet .assignmentHeader h2 {
+    color: var(--red);
+}
+
+.myassignment .cards_wrap {
+    width: 100%;
+}
+  
+.myassignment .cards_wrap .card_item {
+    width: 25%;
+}
+  
+.myassignment .cards_wrap .card_inner {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 7px 13px rgba(0, 0, 0, 0.3);
+    min-width: 225px;
+    max-height: 370px;
+    width: 100%;
+}
+  
+.myassignment .cards_wrap .card_item img {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 6px 13px rgba(0, 0, 0, 0.3);
+}
+
+.myassignment .cards_wrap .card_item .subject {
+    color: var(--red);
+	letter-spacing: 2px;
+	font-size: 20px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+.myassignment .cards_wrap .card_item .Date{
+    color: #939494;
+    font-size: 12px;
+}
+
+.myassignment .cards_wrap .noofassignmnets a {
+    color: #3c3c3c;
+}
+  
+.myassignment .status.complete {
+    background: #1795ce;
+    color: var(--white);
+    font-size: 14px;
+}
+  
+.myassignment .status.notcomplete {
+    background: #e9b10a;
+    color: var(--white);
+    font-size: 14px;
+}
+
+/* Results Page */
+.myresults {
+    margin-left: 240px; 
+    transition: margin-left 0.5s;
+    padding: auto;
+}
+
+.myresults .resultsdet {
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+
+.myresults .courseresults {
+    width: 100%;
+    overflow-y: hidden;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+  
+.myresults .courseresults h2 {
+    color: var(--red);
+}
+  
+.myresults table {
+    width: 100%;
+}
+
+.myresults .courseresults table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+  
+.myresults .courseresults table tbody tr:hover {
+    background: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Fee Page */
+.myfee {
+    margin-left: 240px; 
+    transition: margin-left 0.5s;
+    padding: auto;
+}
+
+.myfee .feedet {
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+  
+.myfee .coursefee {
+    width: 100%;
+    overflow-y: hidden;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+  
+.myfee .cardHeader h2 {
+    color: var(--red);
+}
+  
+.myfee table {
+    width: 100%;
+}
+  
+.myfee .coursefee table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+  
+.myfee .coursefee table tbody tr:hover {
+    background: var(--red);
+    color: var(--white);
+    cursor: pointer;
+}
+  
+.myfee .status.fully {
+    padding: 2px 4px;
+    background: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+}
+  
+.myfee .status.partially {
+    padding: 2px 4px;
+    background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+}
+  
+.myfee .status.not {
+    padding: 2px 4px;
+    background: rgb(24, 128, 61);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+}
+ 
+/* Responsive Design */
+@media screen and (max-width: 1400px) {
+    .dashboard .cardBox .card .numbers {
+        font-size: 2rem;
+    }
+
+    .myclasses .cards_wrap .card_item,
+    .myassignment .cards_wrap .card_item {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .sidebar {
+        width: 200px; 
+    }
+
+    .dashboard,
+    .courseenroll,
+    .myclasses,
+    .myattendence,
+    .myassignment,
+    .myresults,
+    .myfee {
+        margin-left: 200px;  
+    }
+
+    .dashboard .details,
+    .dashboard .cardBox {
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard .details Table {
+        width: 1000px;
+    }
+
+    .dashboard .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .myclasses .cards_wrap .card_item,
+    .myassignment .cards_wrap .card_item {
+        width: 47%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard .details {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard .details Table {
+        width: 800px;
+    }
+
+    .myclasses .cards_wrap .card_item,
+    .myassignment .cards_wrap .card_item {
+        width: 45%;
+    }
+
+    .myattendence .courseattendence .courseattendencetable table,
+    .myresults table,
+    .myfee table {
+        width: 800px;
+    }
+}
+
+@media (max-width: 739px) {
+    .myclasses .cards_wrap .card_item,
+    .myassignment .cards_wrap .card_item {
+        width: 100%;
+    }
+
+    .myclasses .cards_wrap .card_item img,
+    .myassignment .cards_wrap .card_item img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard,
+    .courseenroll,
+    .myclasses,
+    .myattendence,
+    .myassignment,
+    .myresults,
+    .myfee {
+        margin-left: 0px;  
+    }
+
+    .dashboard .cardBox {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard .cardBox .box .numbers {
+        font-size: 2rem;
+    }
+    
+    .dashboard .cardBox .box .iconBx i {
+        font-size: 2.5rem;
+    }
+
+    .myattendence .courseattendence .courseattendencetable table,
+    .myresults table,
+    .myfee table {
+        width: 600px;
+    }
+}
+
+
