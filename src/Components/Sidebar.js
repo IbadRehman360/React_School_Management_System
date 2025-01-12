@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import './styles/style.css';
 
 function Sidebar() {
-  const [expanded, setExpanded] = useState(true); // Initialize the sidebar as expanded
+  const [expanded, setExpanded] = useState(true); 
   const navigate = useNavigate();
 
   const toggleSidebar = () => {
@@ -49,10 +49,7 @@ function Sidebar() {
             <NavIcon><i className="fa-solid fa-sack-dollar" style={{ fontSize: "1.75em" }} /></NavIcon>
             <NavText>Fee</NavText>
           </NavItem>
-          <NavItem eventKey="Logout">
-            <NavIcon><i className="fa-solid fa-right-from-bracket" style={{ fontSize: "1.75em" }} /></NavIcon>
-            <NavText>Sign Out</NavText>
-          </NavItem>
+     
         </SideNav.Nav>
       </SideNav>
     </div>
